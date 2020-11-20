@@ -6,6 +6,7 @@ openvpn_packages:
 
 _openvpn_config_directory:
   default: /etc/openvpn
+  Debian: /etc/openvpn
   RedHat: /etc/openvpn/server
 
 openvpn_config_directory: "{{ _openvpn_config_directory[ansible_os_family] | default(_openvpn_config_directory['default']) }}"

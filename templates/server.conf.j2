@@ -76,14 +76,15 @@ dev {{ server_dev }}
 # Any X509 key management system can be used.
 # OpenVPN can also use a PKCS #12 formatted key file
 # (see "pkcs12" directive in man page).
-ca {{ openvpn_certs_directory }}/certs/ca.crt
-cert {{ openvpn_certs_directory }}/certs/server.crt
-key {{ openvpn_certs_directory }}/private/server.pem  # This file should be kept secret
+ca {{ openvpn_certs_directory }}/{{ ca_common_name }}/certs/ca.crt
+cert {{ openvpn_certs_directory }}/{{ ca_common_name }}/certs/server.crt
+key {{ openvpn_certs_directory }}/{{ ca_common_name }}/subject_keys/server.pem  # This file should be kept secret
 
 # Diffie hellman parameters.
 # Generate your own with:
 #   openssl dhparam -out dh2048.pem 2048
-dh {{ openvpn_certs_directory }}/server/dh2048.pem
+# dh {{ openvpn_certs_directory }}/server/dh2048.pem
+dh {{ openvpn_certs_directory }}/dh2048.pem
 
 # Network topology
 # Should be subnet (addressing via IP)

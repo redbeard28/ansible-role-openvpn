@@ -6,6 +6,7 @@ openvpn_local_key_directory: /tmp
 
 # Openvpn Server protocol to use
 server_proto: "tcp"
+server_port: "443"
 server_dev: "tun"
 server_vpn_subnet: "192.168.254.0 255.255.255.0"
 ## prevent DNS requests from leaking outside the VPN connection

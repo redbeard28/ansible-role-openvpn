@@ -3,4 +3,4 @@
   assert:
     that:
       - openvpn_local_key_directory is defined
-    quiet: yes
+    quiet: true

@@ -1,6 +1,6 @@
 ---
 galaxy_info:
-  author: Robert de Bock
+  author: Jeremie CUADRADO
   role_name: openvpn
   description: Install and configure openvpn server or client on your system. Fork from robertdebock
   license: Apache-2.0
@@ -20,5 +20,4 @@ galaxy_info:
   galaxy_tags:
     - openvpn
 
-dependencies:
-  - robertdebock.ca
+dependencies: []
